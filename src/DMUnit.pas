@@ -54,7 +54,7 @@ begin
   if not CpConnection.Connected then
   begin
     CpConnection.Params.Values['Database'] :=
-      ExtractFilePath(ParamStr(0)) + PathDelim + 'CB_DB.sqlite';
+      ExtractFilePath(ParamStr(0)) + PathDelim + 'CP_DB.sqlite';
     try
       CpConnection.Connected := True;
     except on e: Exception do

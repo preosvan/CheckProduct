@@ -6,7 +6,6 @@ object DM: TDM
   object CpConnection: TFDConnection
     Params.Strings = (
       'ConnectionDef=CP')
-    Connected = True
     LoginPrompt = False
     Left = 32
     Top = 17
