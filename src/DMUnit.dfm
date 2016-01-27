@@ -4,8 +4,6 @@ object DM: TDM
   Height = 150
   Width = 215
   object CpConnection: TFDConnection
-    Params.Strings = (
-      'ConnectionDef=CP')
     LoginPrompt = False
     Left = 32
     Top = 17

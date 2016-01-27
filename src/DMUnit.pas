@@ -53,8 +53,9 @@ procedure TDM.InitConnection;
 begin
   if not CpConnection.Connected then
   begin
+    CpConnection.Params.Values['DriverID'] := 'SQLite';
     CpConnection.Params.Values['Database'] :=
-      ExtractFilePath(ParamStr(0)) + PathDelim + 'CP_DB.sqlite';
+      ExtractFilePath(ParamStr(0)) + {PathDelim + }'CP_DB.sqlite';
     try
       CpConnection.Connected := True;
     except on e: Exception do
@@ -72,7 +73,7 @@ begin
   begin
     SQLStr :=
       'select c.TEL, i.* from customer c ' +
-      'left join invitem i on c.tel = i.ACCSS ' +
+      'join invitem i on c.tel = i.ACCSS ' +
       'where c.TEL = ' + QuotedStr(APhone) +
       ' and i.PICKUP = ' + QuotedStr('True') +
       ' and i.ALTERATION = ' + QuotedStr('False');
@@ -80,7 +81,7 @@ begin
 
     SQLStr :=
       'select c.TEL, i.* from customer c ' +
-      'left join invitem i on c.tel = i.ACCSS ' +
+      'join invitem i on c.tel = i.ACCSS ' +
       'where c.TEL = ' + QuotedStr(APhone) +
       ' and i.PICKUP = ' + QuotedStr('False') +
       ' and i.ALTERATION = ' + QuotedStr('False');

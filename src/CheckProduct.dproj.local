@@ -1,14 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2016.01.26 01:10:46.660,=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2016.01.26 01:15:46.918,E:\DelphiProjects\_Kuhtin\CheckProduct\src\MainFrm.pas=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2016.01.26 01:15:46.918,E:\DelphiProjects\_Kuhtin\CheckProduct\src\MainFrm.fmx=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2016.01.26 01:16:06.048,E:\DelphiProjects\_Kuhtin\CheckProduct\src\CheckProduct.dproj=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
-    <Transaction>2016.01.26 05:27:32.844,=E:\DelphiProjects\_Kuhtin\CheckProduct\src\Unit1.pas</Transaction>
-    <Transaction>2016.01.26 05:28:19.477,E:\DelphiProjects\_Kuhtin\CheckProduct\src\DMUnit.dfm=E:\DelphiProjects\_Kuhtin\CheckProduct\src\Unit1.dfm</Transaction>
-    <Transaction>2016.01.26 05:28:19.477,E:\DelphiProjects\_Kuhtin\CheckProduct\src\DMUnit.pas=E:\DelphiProjects\_Kuhtin\CheckProduct\src\Unit1.pas</Transaction>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.844,=E:\DelphiProjects\_Kuhtin\CheckProduct\src\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.918,C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.fmx=E:\DelphiProjects\_Kuhtin\CheckProduct\src\MainFrm.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.477,E:\DelphiProjects\_Kuhtin\CheckProduct\src\Unit1.dfm=E:\DelphiProjects\_Kuhtin\CheckProduct\src\DMUnit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.477,E:\DelphiProjects\_Kuhtin\CheckProduct\src\Unit1.pas=E:\DelphiProjects\_Kuhtin\CheckProduct\src\DMUnit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.918,C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.pas=E:\DelphiProjects\_Kuhtin\CheckProduct\src\MainFrm.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.660,=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.048,C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Project1.dproj=E:\DelphiProjects\_Kuhtin\CheckProduct\src\CheckProduct.dproj</Transaction>
   </Transactions>
-  <ActiveMobileDevice>   <NoProfile iOSSimulator="iPhone5"/>
-  </ActiveMobileDevice>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
 </BorlandProject>

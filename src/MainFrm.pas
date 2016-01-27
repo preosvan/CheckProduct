@@ -46,17 +46,23 @@ type
     actPrintNotReady: TAction;
     TabNothing: TTabItem;
     Layout1: TLayout;
-    GridForNothing: TGrid;
-    CheckColumnNothing: TCheckColumn;
-    StringColumnItemNothing: TStringColumn;
-    StringColumnSlotNothing: TStringColumn;
-    ColumnOrderNothing: TColumn;
-    ColumnOrderBalanceNothing: TColumn;
     lbNothing: TLabel;
     ImageSmile: TImage;
     btnBack2: TButton;
     Image1: TImage;
     lbOops: TLabel;
+    Layout2: TLayout;
+    Layout3: TLayout;
+    Layout4: TLayout;
+    Layouttop: TLayout;
+    LayoutCentr1: TLayout;
+    LayoutCentr2: TLayout;
+    Layout8: TLayout;
+    LayoutBottom: TLayout;
+    Layout10: TLayout;
+    LayoutReady: TLayout;
+    LayoutNotReady: TLayout;
+    ScaledLayout1: TScaledLayout;
     procedure actGoExecute(Sender: TObject);
     procedure GridForPickUpDrawColumnCell(Sender: TObject;
       const Canvas: TCanvas; const Column: TColumn; const [Ref] Bounds: TRectF;
@@ -81,6 +87,7 @@ type
   Row: Integer; var Value: TValue);
     procedure InitGridHeader(Sender: TObject; const Col,
       Row: Integer; var Value: TValue);
+    procedure ResizeGridColumns(Grid: TGrid);
   public
     { Public declarations }
   end;
@@ -94,6 +101,9 @@ uses
   DMUnit;
 
 {$R *.fmx}
+{$R *.XLgXhdpiTb.fmx ANDROID}
+{$R *.LgXhdpiPh.fmx ANDROID}
+{$R *.iPhone.fmx IOS}
 
 procedure TMainForm.actGoExecute(Sender: TObject);
 var
@@ -133,16 +143,19 @@ const
   MinWidth  = 532;
   MinHeight = 468;
 begin
-  if (Width <= MinWidth) or (Height <= MinHeight) then
+  if (Width < MinWidth) or (Height < MinHeight) then
   begin
     SetBounds(Self.Left, Self.Top, MinWidth, MinHeight);
     Self.ReleaseCapture;
   end;
+  ResizeGridColumns(GridForPickUp);
+  ResizeGridColumns(GridForNotReady);
+  LayoutNotReady.Size.Height := (LayoutPickUp.Size.Height / 2);
 end;
 
 procedure TMainForm.actBackExecute(Sender: TObject);
 begin
-//  edPhone.Text := EmptyStr;
+  edPhone.Text := EmptyStr;
   tcMain.ActiveTab := TabLogin;
 end;
 
@@ -184,7 +197,7 @@ begin
   if (Row > 0) and (Row <= TGrid(Sender).RowCount - 2)  then
   begin
     AQuery.First;
-    while not AQuery.Eof or (AQuery.RecNo > Row) do
+    while not AQuery.Eof {or (AQuery.RecNo > Row)} do
     begin
       if (AQuery.RecNo = Row) then
       begin
@@ -194,8 +207,9 @@ begin
           3: Value := '';
           4: Value := '';
         end;
-        AQuery.Next;
+        exit;
       end;
+      AQuery.Next;
     end;
   end;
 end;
@@ -225,6 +239,18 @@ begin
     3: Value := 'Total';
     4: Value := '0$';
   end;
+end;
+
+procedure TMainForm.ResizeGridColumns(Grid: TGrid);
+var
+  I: Integer;
+  W: Single;
+begin
+  W := 0;
+  for I := 0 to Grid.ColumnCount - 1 do
+    W := W + Grid.Columns[I].Size.Width;
+  for I := 0 to Grid.ColumnCount - 1 do
+    Grid.Columns[I].Size.Width := Grid.Columns[I].Size.Width * ((Grid.Size.Width - 24{TODO Change to ScrollWidth}) / W);
 end;
 
 end.
