@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2016.02.08 22:08:00.944,=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016.02.08 22:08:37.420,=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016.02.08 22:08:50.547,C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\DMUnit.pas=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2016.02.08 22:09:23.679,C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\MainFrm.pas=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016.02.08 22:09:23.679,C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\MainFrm.dfm=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2016.02.08 22:09:38.147,C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\CheckProduct.dproj=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2016.02.08 22:10:00.557,E:\DelphiProjects\_Kuhtin\CheckProduct\src\VCL\DMUnit.pas=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\DMUnit.pas</Transaction>
+    <Transaction>2016.02.08 22:10:04.677,E:\DelphiProjects\_Kuhtin\CheckProduct\src\VCL\MainFrm.dfm=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\MainFrm.dfm</Transaction>
+    <Transaction>2016.02.08 22:10:04.677,E:\DelphiProjects\_Kuhtin\CheckProduct\src\VCL\MainFrm.pas=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\MainFrm.pas</Transaction>
+    <Transaction>2016.02.08 22:10:08.214,E:\DelphiProjects\_Kuhtin\CheckProduct\src\VCL\CheckProduct.dproj=C:\Users\Михаил\Documents\Embarcadero\Studio\Projects\CheckProduct.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
