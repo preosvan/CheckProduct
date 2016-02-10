@@ -4,7 +4,6 @@ object DM: TDM
   Height = 238
   Width = 328
   object AdsConnection: TAdsConnection
-    IsConnected = True
     ConnectPath = 'E:\DelphiProjects\_Kuhtin\CheckProduct\bin\ADS'
     LoginPrompt = False
     Left = 64
