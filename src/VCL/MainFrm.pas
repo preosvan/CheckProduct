@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.Buttons, Vcl.StdCtrls,
   Vcl.ExtCtrls, System.ImageList, Vcl.ImgList, System.Actions, Vcl.ActnList,
-  Vcl.Imaging.pngimage, Vcl.Grids, adstable, AdvObj, BaseGrid, AdvGrid;
+  Vcl.Imaging.pngimage, Vcl.Grids, adstable, AdvObj, BaseGrid, AdvGrid,
+  System.UITypes;
 
 type
   TMainForm = class(TForm)
@@ -275,6 +276,15 @@ begin
 
   //Print
   try
+    AGrid.PrintSettings.Date := ppBottomLeft;
+    AGrid.PrintSettings.Time := ppBottomLeft;    
+    AGrid.PrintSettings.HeaderFont.Name := 'Comic Sans MS';
+    AGrid.PrintSettings.HeaderFont.Style := [fsBold];    
+    AGrid.PrintSettings.HeaderFont.Size := 10;    
+    AGrid.PrintSettings.Title := ppTopCenter;    
+    AGrid.PrintSettings.TitleLines.Clear;
+    AGrid.PrintSettings.TitleLines.Add('Report');
+    AGrid.PrintSettings.TitleLines.Add(DM.GetCustomerInfo(Trim(edPhone.Text)));    
     AGrid.Print;
   finally
     AGrid.UnHideRowsAll;

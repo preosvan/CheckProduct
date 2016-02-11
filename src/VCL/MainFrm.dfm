@@ -1957,7 +1957,10 @@ object MainForm: TMainForm
         HoverButtons.Position = hbLeftFromColumnLeft
         HTMLSettings.ImageFolder = 'images'
         HTMLSettings.ImageBaseName = 'img'
+        PrintSettings.FooterSize = 50
+        PrintSettings.HeaderSize = 50
         PrintSettings.DateFormat = 'dd/mm/yyyy'
+        PrintSettings.Title = ppTopCenter
         PrintSettings.Font.Charset = DEFAULT_CHARSET
         PrintSettings.Font.Color = clWindowText
         PrintSettings.Font.Height = -11
@@ -1978,6 +1981,9 @@ object MainForm: TMainForm
         PrintSettings.FooterFont.Height = -11
         PrintSettings.FooterFont.Name = 'Tahoma'
         PrintSettings.FooterFont.Style = []
+        PrintSettings.LeftSize = 50
+        PrintSettings.RightSize = 50
+        PrintSettings.TitleSpacing = 50
         PrintSettings.PageNumSep = '/'
         SearchFooter.FindNextCaption = 'Find &next'
         SearchFooter.FindPrevCaption = 'Find &previous'
@@ -2670,7 +2676,14 @@ object MainForm: TMainForm
         HoverButtons.Position = hbLeftFromColumnLeft
         HTMLSettings.ImageFolder = 'images'
         HTMLSettings.ImageBaseName = 'img'
+        PrintSettings.FooterSize = 50
+        PrintSettings.HeaderSize = 50
+        PrintSettings.Time = ppBottomLeft
+        PrintSettings.Date = ppBottomLeft
         PrintSettings.DateFormat = 'dd/mm/yyyy'
+        PrintSettings.Title = ppTopCenter
+        PrintSettings.TitleLines.Strings = (
+          'dfgdfgdfg')
         PrintSettings.Font.Charset = DEFAULT_CHARSET
         PrintSettings.Font.Color = clWindowText
         PrintSettings.Font.Height = -11
@@ -2691,6 +2704,9 @@ object MainForm: TMainForm
         PrintSettings.FooterFont.Height = -11
         PrintSettings.FooterFont.Name = 'Tahoma'
         PrintSettings.FooterFont.Style = []
+        PrintSettings.LeftSize = 50
+        PrintSettings.RightSize = 50
+        PrintSettings.TitleSpacing = 50
         PrintSettings.PageNumSep = '/'
         SearchFooter.FindNextCaption = 'Find &next'
         SearchFooter.FindPrevCaption = 'Find &previous'
